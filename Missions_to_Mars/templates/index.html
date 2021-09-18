@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p>Click the button to get the most up to date mars info</p>
+      <p><a class="btn btn-lg btn-danger" href="/scrape" role="button">Show that mars stuff!</a></p>
+    </div>
+    
+    <h2>Latest Mars News</h2>
+    <h3>{{mars.news_title}}</h3>
+    <h4>{{mars.news_p}}</h4>
+    <br>
+    <hr>
+    <div class="row">
+
+      <div class="col-md-8">
+        <h3>Featured Image</h3>
+        <img class="img-fluid img-thumbnail" src="{{ mars.featured_image_url}}" alt="Mars feature image">
+      </div>
+
+      <div class="col-md-4">
+        <h3>Mars Facts</h3>
+        {{ mars.facts | safe }}
+        
+      </div>
+
+    </div>
+
+    <hr>
+    <h2>Mars Hemispheres</h2>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h4>{{mars.cerberus_title}}</h4>
+        <img class="img-fluid img-thumbnail" src="https://marshemispheres.com/{{mars.cerberus_img}}" alt="cerberus image">
+      </div>
+      
+
+      <div class="col-md-6">
+        <h4>{{mars.schiaparelli_title}}</h4>
+        <img class="img-fluid img-thumbnail" src="https://marshemispheres.com/{{mars.schiaparelli_img}}" alt="schiaparelli image">
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h4>{{mars.syrtis_major_title}}</h4>
+        <img class="img-fluid img-thumbnail" src="https://marshemispheres.com/{{mars.syrtis_major_img}}" alt="syrtis major image">
+      </div>
+
+      <div class="col-md-6">
+        <h4>{{mars.valles_marineris_title}}</h4>
+        <img class="img-fluid img-thumbnail" src="https://marshemispheres.com/{{mars.valles_marineris_img}}" alt="valles marineris image">
+      </div>
+
+    </div>
+
+  
+
+  </div>
+
+
+
+    
+    
+  </div>
+  </div>
+</body>
+
+</html>
